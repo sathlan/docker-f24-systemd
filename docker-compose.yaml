@@ -1,0 +1,8 @@
+version: '2'
+services:
+  f23-systemd:
+    build: .
+    image: sathlan/f24-systemd:latest
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    tty: true
