@@ -1,4 +1,4 @@
-# Contributing to docker-nexus
+# Contributing to docker-f24-systemd
 
 Have a feature idea, bug fix, or refactoring suggestion? Contributions
 are welcome!
@@ -14,4 +14,5 @@ are welcome!
 3. Once you have the :thumbsup:, fork the repo, make your changes, and
    open a PR.
 4. Don't forget to add your contribution and credit yourself in
-   `CHANGELOG.md`!
+   [CHANGELOG.md](CHANGELOG.md), this follows this
+   [changelog format](http://keepachangelog.com/en/0.3.0/)

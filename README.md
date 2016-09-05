@@ -39,16 +39,16 @@ RUN systemctl enable nginx
 Build in and run it.
 
 ```
-docker build -t my/nginx .
-docker run -p 80:80 -v /sys/fs/cgroup:/sys/fs/cgroup:ro -t \
+$ docker build -t my/nginx .
+$ docker run -p 80:80 -v /sys/fs/cgroup:/sys/fs/cgroup:ro -t \
    -d --name nginx my/nginx
 ```
 
 From the host you have the access log in the journal.
 
 ```
-journalctl -f CONTAINER_NAME=nginx -a &
-curl -s 127.0.0.1:80 >/dev/null
+$ journalctl -f CONTAINER_NAME=nginx -a &
+$ curl -s 127.0.0.1:80 >/dev/null
 ```
 
 ## Test
