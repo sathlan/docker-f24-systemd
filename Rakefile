@@ -34,5 +34,6 @@ task :prep_release do
   STDOUT.puts 'What version ? '
   input = STDIN.gets.chomp
   sh "chag update #{input}"
+  sh "git add CHANGELOG.md && git commit -am 'Bumping to version #{input}'"
   sh 'chag tag'
 end
