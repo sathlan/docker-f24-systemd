@@ -26,3 +26,13 @@ namespace :spec do
     end
   end
 end
+
+desc 'Prepare release'
+task :prep_release do
+  sh 'chag entries'
+  sh 'chag contents'
+  STDOUT.puts 'What version ? '
+  input = STDIN.gets.chomp
+  sh "chag update #{input}"
+  sh 'chag tag'
+end
